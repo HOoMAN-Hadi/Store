@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فروشگاه آنلاین مدرن</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>فروشگاه مدرن</h1>
+      <div class="cart">
+        <span class="cart-count">سبد خرید: 0</span>
+        <button class="view-cart-btn">مشاهده سبد خرید</button>
+      </div>
+    </header>
+
+    <section class="product-list">
+      <!-- <div class="product">
+        <img src="https://via.placeholder.com/150" alt="محصول ۱" />
+        <h2>محصول ۱</h2>
+        <p>توضیحات محصول ۱</p>
+        <span class="price">100,000 تومان</span>
+        <button class="add-to-cart-btn">افزودن به سبد</button>
+      </div> -->
+    </section>
+
+    <div class="cart-modal">
+      <h2>سبد خرید</h2>
+      <ul class="cart-items">
+        <!-- <li>
+          <span>محصول ۱ - 100,000 تومان</span>
+          <input type="number" class="item-quantity" value="1" min="1" />
+          <button class="remove-item-btn">حذف</button>
+        </li>
+         -->
+      </ul>
+      <div class="cart-total">
+        جمع کل: <span id="total-price">0 تومان</span>
+      </div>
+      <button class="close-cart-btn">بستن</button>
+    </div>
+
+    <!-- ساختار Modal -->
+    <div id="itemAddedModal" class="modal">
+      <p></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
