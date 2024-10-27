@@ -1,8 +1,20 @@
+/* لینک کردن سایر فایل های css */
+@import url(productPage.css);
+/* اضافه کردن فونت */
 @font-face {
   font-family: laleZar;
-  src: url(Lalezar-Font/TTF/Lalezar-Regular.ttf);
-  src: url(Lalezar-Font/OTF/Lalezar-Regular.otf);
+  src: url("../../assest/Lalezar-Font/TTF/Lalezar-Regular.ttf")
+      format("TrueType"),
+    url("../../assest/Lalezar-Font/OTF/Lalezar-Regular.otf") format("OpenType");
 }
+/* تعریف متغیر ها */
+:root {
+  --lightBlueColor: #4a90e2;
+  --blueColor: #007bff;
+  --greenColor: #28a745;
+  --orangeColor: #ffc107;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4a90e2;
+  background-color: var(--lightBlueColor);
   padding: 15px;
   color: white;
   border-radius: 10px;
@@ -33,6 +45,7 @@ header {
   margin-top: 40px;
   gap: 20px;
   flex-wrap: wrap;
+  font-family: "laleZar", "Arial", sans-serif;
 }
 
 .product {
@@ -64,14 +77,26 @@ header {
   margin-bottom: 10px;
 }
 
+.product a {
+  color: var(--blueColor);
+  text-decoration: none;
+}
+.product a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--blueColor);
+  text-underline-offset: 10px;
+  font-weight: bold;
+  color: var(--orangeColor);
+}
 .price {
   font-size: 1.5em;
-  color: #28a745;
+  color: var(--greenColor);
   margin-top: 15px;
 }
 
 .add-to-cart-btn {
-  background-color: #28a745;
+  background-color: var(--greenColor);
+  font-family: "laleZar", "Arial", sans-serif;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -93,7 +118,7 @@ header {
 
 .cart-count {
   margin-right: 15px;
-  background-color: #ffc107;
+  background-color: var(--orangeColor);
   padding: 5px 10px;
   border-radius: 5px;
   color: #333;
@@ -102,7 +127,7 @@ header {
 
 .view-cart-btn {
   font-family: "laleZar", "Arial", sans-serif;
-  background-color: #007bff;
+  background-color: var(--greenColor);
   color: white;
   padding: 10px;
   border: none;
@@ -169,7 +194,7 @@ header {
 
 .close-cart-btn {
   font-family: "laleZar", "Arial", sans-serif;
-  background-color: #28a745;
+  background-color: var(--greenColor);
   color: white;
   border: none;
   padding: 10px;
@@ -182,14 +207,14 @@ header {
 /* استایل Modal */
 .modal {
   position: fixed;
-  bottom: 20px; /* قرار گرفتن در پایین صفحه */
-  left: 20px; /* قرار گرفتن در سمت چپ */
-  background-color: #4a90e2; /* رنگ سبز برای جذابیت */
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--lightBlueColor);
   color: white;
   padding: 15px;
-  border-radius: 10px; /* گوشه‌های گرد */
+  border-radius: 10px;
   font-size: 16px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* سایه برای عمق */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0; /* شروع با حالت پنهان */
   transform: translateY(20px); /* حرکت اولیه به سمت پایین */
   transition: opacity 0.5s ease, transform 0.5s ease; /* انیمیشن برای ظاهر شدن */

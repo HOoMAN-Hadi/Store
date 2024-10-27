@@ -65,9 +65,11 @@ function displayItems(allItems) {
       "beforeend",
       '<div class="product"> <img src="' +
         item.image +
-        '" alt="محصول" /><h2>' +
+        '" alt="محصول" /><a href="productPage.html?id=' +
+        item.id +
+        '"> <h2>' +
         item.title +
-        "</h2> <p>توضیحات " +
+        "</h2> </a> <p>توضیحات " +
         item.title +
         '</p> <span class="price">' +
         item.price +
